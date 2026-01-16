@@ -162,14 +162,9 @@ kubectl exec -n datadog daemonset/datadog-agent -c agent -- agent check kubelet
 
 **This is expected behavior.** The "—" indicates there is no limit defined, so no percentage can be calculated.
 
-### Screenshots
+### Screenshot
 
-In Datadog UI (Kubernetes Explorer > Pods):
-
-| Pod | CPU Usage/Limits | Mem Usage/Limits |
-|-----|------------------|------------------|
-| pod-with-limits | 0% | 7.43% |
-| pod-without-limits | — | — |
+![Datadog UI showing pod-with-limits (0%, 7.43%) and pod-without-limits (—, —)](datadog-ui-result.png)
 
 ## Fix / Workaround
 
